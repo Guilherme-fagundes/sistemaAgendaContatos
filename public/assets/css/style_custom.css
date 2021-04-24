@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none!important;
+    outline: 0!important;
+    font-family: 'Lato', sans-serif;
+    overflow-x: auto;
+}
+
+/*ESTILO DO LOGIN*/
+.login{
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #0078ff;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loginBox{
+    width: 30%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1em 1em;
+    border-radius: 5px;
+    min-width: 320px;
+}
+/*ESTILO NOVA CONTA*/
+.create{
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    background-color: #0078ff;
+    padding: 4.3em 0;
+}
+.createBox{
+    width: 30%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1em 1em;
+    border-radius: 5px;
+    min-width: 320px;
+}
+
+/*ESTILO DO PAINEL*/
+.dashHeader{
+    background-color: #0078ff;
+}
