@@ -19,7 +19,7 @@
 
                     @if(!$dataContacts->all())
                         <div class="alert alert-warning" role="alert">
-                            Menhum contato cadastrado no momento
+                            Nenhum contato cadastrado no momento
 
                         </div>
                     @else

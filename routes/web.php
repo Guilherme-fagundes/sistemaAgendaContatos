@@ -4,6 +4,7 @@ use App\Http\Controllers\Acount\AcountController;
 use App\Http\Controllers\Acount\ContactController;
 use App\Http\Controllers\Acount\EventsController;
 use App\Http\Controllers\Acount\GroupsController;
+use App\Http\Controllers\Acount\ParticipantController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,5 +41,8 @@ Route::prefix('conta')->group(function (){
 
     // Eventos
     Route::get('/eventos', [EventsController::class, 'index'])->name('events.index');
+    Route::get('/eventos/novo-evento', [EventsController::class, 'create'])->name('events.new');
+    Route::post('/eventos/novo-evento/post', [EventsController::class, 'createPost'])->name('events.create.post');
+
 
 });

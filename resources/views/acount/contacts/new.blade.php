@@ -16,7 +16,7 @@
             <div class="row py-3">
                 <div class="col-12">
 
-                    <form method="post" action="{{ route('contact.new.post') }}">
+                    <form method="post" action="{{ route('contact.new.post') }}" style="overflow-x: hidden">
                         @csrf
                         @if($errors->all())
                             @if($errors->all()[0] == 'error')

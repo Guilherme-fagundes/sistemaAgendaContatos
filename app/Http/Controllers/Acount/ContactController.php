@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Acount;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactsModel;
+use App\Models\EventModel;
+use App\Models\ParticipantsModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -54,12 +57,15 @@ class ContactController extends Controller
                     'email' => $request->email
                 ];
 
-                $createContact = DB::table('contacts')
-                    ->insert($dataContacts);
+                $createContact = new ContactsModel();
 
-                if ($createContact){
-                    return redirect()->back()->withErrors(['success', "O contato {$request->name} foi cadastrado"]);
-                }
+                $createContact->first_name = $request->name;
+                $createContact->last_name = $request->last_name;
+                $createContact->cell = $request->cell;
+                $createContact->email = $request->email;
+
+                $createContact->save();
+                return redirect()->back()->withErrors(['success', "O contato {$request->name} foi cadastrado"]);
             }
 
         }
