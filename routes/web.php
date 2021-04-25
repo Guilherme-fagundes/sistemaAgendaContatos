@@ -44,5 +44,7 @@ Route::prefix('conta')->group(function (){
     Route::get('/eventos/novo-evento', [EventsController::class, 'create'])->name('events.new');
     Route::post('/eventos/novo-evento/post', [EventsController::class, 'createPost'])->name('events.create.post');
 
+    Route::get('/eventos/{id}', [EventsController::class, 'details'])->name('events.details');
+    Route::post('/eventos/adicionar-participante', [EventsController::class, 'addP'])->name('events.addP');
 
 });

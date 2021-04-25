@@ -31,6 +31,7 @@
                                 <th>Data do evento</th>
                                 <th>Cadastrado em</th>
                                 <th>Ultima atualização</th>
+                                <th>Ação</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -40,6 +41,9 @@
                                         <td>{{ $event->date }}</td>
                                         <td>{{ date('d-m-Y H:i:s', strtotime($event->created_at)) }}</td>
                                         <td>{{ ($event->updated_at == null ? 'Sem atualização no momento' : date('d-m-Y H:i:s', strtotime($event->updated_at))) }}</td>
+                                        <td>
+                                            <a class="btn btn-sm" title="Gerenciar evento" href="{{ route('events.details', ['id' => $event->id]) }}" style="background-color: orange; color: #f2f2f2"><i class="fas fa-cog"></i></a>
+                                        </td>
                                     </tr>
                                 @endforeach
 

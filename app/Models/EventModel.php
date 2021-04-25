@@ -11,4 +11,11 @@ class EventModel extends Model
 
     protected $table = "events";
 
+    public function contacts()
+    {
+        return $this->belongsToMany('App\\Models\\ContactsModel',
+            'participants',
+            'event_id',
+            'part_contact');
+    }
 }
