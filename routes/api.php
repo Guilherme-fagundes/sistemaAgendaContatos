@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\ContactsController;
+use App\Http\Controllers\Api\GroupsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,7 @@ Route::get('/contato/{id}/apagar', [ContactsController::class, 'destroy'])->name
 Route::post('/contato/{id}/atualizar', [ContactsController::class, 'update'])->name('contacts.update');
 
 //Grupos
-
+Route::get('/grupos', [GroupsController::class, 'index'])->name('group.index');
+Route::get('/grupo/{id}', [GroupsController::class, 'show'])->name('group.show');
+Route::get('/grupo/{id}/deletar', [GroupsController::class, 'delete'])->name('group.delete');
+Route::post('/grupo/{id}/atualizar', [GroupsController::class, 'update'])->name('group.update');
