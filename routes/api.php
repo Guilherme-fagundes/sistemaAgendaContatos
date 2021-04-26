@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\ContactsController;
+use App\Http\Controllers\Api\EventsController;
 use App\Http\Controllers\Api\GroupsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,9 @@ Route::get('/grupos', [GroupsController::class, 'index'])->name('group.index');
 Route::get('/grupo/{id}', [GroupsController::class, 'show'])->name('group.show');
 Route::get('/grupo/{id}/deletar', [GroupsController::class, 'delete'])->name('group.delete');
 Route::post('/grupo/{id}/atualizar', [GroupsController::class, 'update'])->name('group.update');
+
+//Eventos
+Route::get('/eventos', [EventsController::class, 'index'])->name('events.index');
+Route::get('/evento/{id}', [EventsController::class, 'show'])->name('events.show');
+Route::get('/evento/{id}/deletar', [EventsController::class, 'delete'])->name('events.delete');
+Route::post('/evento/{id}/atualizar', [EventsController::class, 'update'])->name('events.update');

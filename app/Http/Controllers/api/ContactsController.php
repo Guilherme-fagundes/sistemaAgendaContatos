@@ -82,17 +82,19 @@ class ContactsController extends Controller
             }elseif (!filter_var($request->email, FILTER_VALIDATE_EMAIL)){
                 $this->json['error'] = "E-mail inválido";
                 $this->json['status'] = false;
+            }else{
+                $update = DB::table('contacts')
+                    ->where(['id' => $id])
+                    ->update($request->all());
+
+                if ($update){
+                    $this->json['status'] = true;
+                    $this->json['success'] = "Dados atualizados";
+                }
             }
         }
 
-        $update = DB::table('contacts')
-            ->where(['id' => $id])
-            ->update($request->all());
 
-        if ($update){
-            $this->json['status'] = true;
-            $this->json['success'] = "Dados atualizados";
-        }
         echo json_encode($this->json);
     }
 }
