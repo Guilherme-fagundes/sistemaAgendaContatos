@@ -10,7 +10,7 @@ Foi utilizada a versão 8.0 do php e pacote XAMPP para desenvolvimento.
 git clone https://github.com/Guilherme-fagundes/sistemaAgendaContatos.git
 ```
 
-<b>IMPORTANTE</b> Renomeia a pasta de onde se encontra os arquivos para <i>agentaContatos</i>
+<b>IMPORTANTE</b> Renomeia a pasta de onde se encontra os arquivos para <i>agendaContatos</i>
 
 Entre na pasta do projeto e instale as dependencias do composer
 usando o seguinte comando:
