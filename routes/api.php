@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ContactsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Contatos
+Route::get('/contatos', [ContactsController::class, 'index'])->name('contacts.list');
+Route::get('/contato/{id}', [ContactsController::class, 'show'])->name('contacts.show');
+Route::post('/contato/novo', [ContactsController::class, 'create'])->name('contacts.register');
+Route::get('/contato/{id}/apagar', [ContactsController::class, 'destroy'])->name('contacts.destroy');
+Route::post('/contato/{id}/atualizar', [ContactsController::class, 'update'])->name('contacts.update');
+
+//Grupos
+
