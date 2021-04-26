@@ -41,7 +41,11 @@
             <button type="submit" class="btn btn-primary btn-sm rounded-0">Entrar</button>
             <span style="float: right"><small class="text-dark">Ainda não tem conta? </small><a href="{{ route('sys.newAcount') }}" class="btn btn-link btn-sm">Crie uma agora</a></span>
         </form>
+
+        
+
     </div>
+    <p style="position: absolute; bottom: 0"><a style="color: #f1f1f1" target="_blank" href="https://documenter.getpostman.com/view/13685786/TzJybvA4">Referencias da API</a></p>
 
 </section>
 

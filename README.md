@@ -26,7 +26,7 @@ Altere as seguintes chaves:
 
 ```.env
 APP_URL=http://localhost/sistemaAgendaContatos
-APP_NAME=Agenda de contatos
+APP_NAME='Agenda de contatos'
 DB_DATABASE=agenda
 ```
 Usuário e senha deixe padrão
@@ -36,5 +36,9 @@ As configurações de email use suas credenciais.
 Importe o sql do banco de dados que se encontra na pasta BKP_BANCO
 
 Crie sua conta na aplicação e faça o login
+
+## API
+
+Acesse a documentação da api <a href="https://documenter.getpostman.com/view/13685786/TzJybvA4">aqui</a>
 
 
